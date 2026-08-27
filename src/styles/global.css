@@ -144,7 +144,6 @@ h2 { margin-bottom: 17px; font-size: clamp(2rem, 4.5vw, 3.65rem); line-height: 1
 }
 
 @media (max-width: 430px) {
-  .button-social { display: none; }
   .project-footer { align-items: flex-start; flex-direction: column; gap: 17px; }
   .footer { min-height: 70px; }
 }
