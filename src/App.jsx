@@ -22,7 +22,7 @@ export default function App() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')),
+      (entries) => entries.forEach((entry) => entry.target.classList.toggle('is-visible', entry.isIntersecting)),
       { threshold: 0.12 },
     );
     const elements = document.querySelectorAll('.reveal');
