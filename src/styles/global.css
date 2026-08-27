@@ -120,6 +120,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2rem, 4.5vw, 3.65rem); line-height: 1
 
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease var(--delay, 0ms), transform .5s ease var(--delay, 0ms); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal.no-reveal-transition { transition: none; }
 
 @media (max-width: 760px) {
   .container { width: min(100% - 32px, 720px); }
