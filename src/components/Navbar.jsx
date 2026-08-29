@@ -11,13 +11,26 @@ const navigation = [
 export function Navbar({ theme, toggleTheme }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let previousScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const distance = currentScrollY - previousScrollY;
+
+      setScrolled(currentScrollY > 12);
+      if (currentScrollY <= 12 || distance < -6 || open) setHidden(false);
+      else if (distance > 6) setHidden(true);
+
+      previousScrollY = currentScrollY;
+    };
+
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     const onKeyDown = (event) => event.key === 'Escape' && setOpen(false);
@@ -26,7 +39,7 @@ export function Navbar({ theme, toggleTheme }) {
   }, []);
 
   return (
-    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
+    <header className={`site-header ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}>
       <nav className="nav container" aria-label="Main navigation">
         <a className="wordmark" href="#about" onClick={() => setOpen(false)}>Fotis Balis<span>.</span></a>
         <div className={`nav-menu ${open ? 'is-open' : ''}`} id="primary-navigation">

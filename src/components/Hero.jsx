@@ -6,7 +6,6 @@ export function Hero() {
   return (
     <section id="about" className="hero container" aria-labelledby="hero-title">
       <div className="hero-content">
-        <p className="eyebrow reveal">{hero.title}</p>
         <h1 id="hero-title" className="reveal">{hero.name}</h1>
         <p className="hero-intro reveal">{hero.intro}</p>
         <a className="hero-email reveal" href={`mailto:${socialLinks.email}`}><Mail size={17} />{socialLinks.email}</a>

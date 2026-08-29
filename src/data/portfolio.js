@@ -9,7 +9,7 @@ export const hero = {
   name: 'Fotis Balis',
   title: 'Computer Science Student',
   intro:
-    'Final-year Computer Science student at the University of Crete .',
+    'Final-year CS student at the University of Crete',
 };
 
 export const education = [
@@ -28,7 +28,7 @@ export const career = [
     type: 'Internship',
     title: 'Scidrones',
     organization: 'Full stack web application development',
-    period: '2026',
+    period: 'JUL 2026 - Present',
     description: 'Developing a web application for Scidrones\'s LaskAI (AI model for marine litter detection).',
     details: '',
   },
@@ -47,7 +47,7 @@ export const projects = [
   },
   {
     name: 'AI Macro Tracking Desktop app',
-    description: 'Desktop app using AI to calculate and track macros, connected via API integration to chatGPT. (OpenAI API key required for use)  ',
+    description: 'Desktop app using AI to calculate and track macros, connected via API integration to chatGPT. (OpenAI API key required to enable the AI)',
     technologies: ['FastAPI', 'SQLite'],
     releases: 'https://github.com/fotisbalis/Macro_Tracker_Web_App/releases',
     github: 'https://github.com/fotisbalis/Macro_Tracker_Web_App',
@@ -56,21 +56,21 @@ export const projects = [
     number: '02',
   },
   {
-    name: 'University Payout System',
-    description: 'A system developed for managing and automating the payouts of universities. (Team Project)',
-    technologies: ['MySQL', 'Java'],
-    github: 'https://github.com/aggeloz19/Uni_payouts_system',
-    featured: true,
-    topRightLabel: 'HY360 Project',
-    number: '03',
-  },
-  {
     name: 'Compiler and Virtual Machine',
     description: 'A compiler and virtual machine for the Alpha programming language (similar to javascript).',
-    technologies: ['C', 'Lex', 'Yacc'],
+    technologies: ['c', 'Lex', 'Yacc'],
     github: 'https://github.com/fotisbalis/Alpha_Compiler_and_Virtual_Machine_HY340_Project',
     featured: true,
     topRightLabel: 'HY340 Project',
+    number: '03',
+  },
+  {
+    name: 'University Payout System',
+    description: 'A system developed for managing and automating the payouts of universities.',
+    technologies: ['MySQL', 'Java'],
+    github: 'https://github.com/aggeloz19/Uni_payouts_system',
+    featured: true,
+    topRightLabel: 'HY360 Group Project',
     number: '04',
   },
   {
