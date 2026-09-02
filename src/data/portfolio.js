@@ -31,13 +31,13 @@ export const career = [
     period: 'JUL 2026 - Present',
     description: 'Developing a web application for Scidrones\'s LaskAI (AI model for marine litter detection).',
     details: '',
-  },
+  }
 ];
 
 export const projects = [
   {
     name: 'Chess Game with Custom Engine',
-    description: 'A java developed chess desktop game with a custom engine featuring local multiplayer games and AI opponent with difficulty levels.',
+    description: 'A Java developed chess desktop game with a custom engine featuring local multiplayer games and AI opponent with difficulty levels.',
     technologies: ['Java', 'Custom AI'],
     releases: 'https://github.com/fotisbalis/Chess/releases',
     github: 'https://github.com/fotisbalis/Chess',
