@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar';
 import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
 
 const getInitialTheme = () => {
   const savedTheme = localStorage.getItem('portfolio-theme');
@@ -62,5 +63,5 @@ export default function App() {
     };
   }, []);
 
-  return <><Navbar theme={theme} toggleTheme={() => setTheme((value) => value === 'dark' ? 'light' : 'dark')} /><main><Hero /><Experience /><Projects /></main><Footer /></>;
+  return <><Navbar theme={theme} toggleTheme={() => setTheme((value) => value === 'dark' ? 'light' : 'dark')} /><main><Hero /><Experience /><Skills /><Projects /></main><Footer /></>;
 }

@@ -5,6 +5,7 @@ import { ThemeToggle } from './ThemeToggle';
 const navigation = [
   ['About', '#about'],
   ['Experience', '#experience'],
+  ['Skills', '#skills'],
   ['Projects', '#projects'],
 ];
 

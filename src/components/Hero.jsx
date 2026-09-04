@@ -8,6 +8,7 @@ export function Hero() {
       <div className="hero-content">
         <h1 id="hero-title" className="reveal">{hero.name}</h1>
         <p className="hero-intro reveal">{hero.intro}</p>
+        <p className="hero-description reveal">{hero.focus_areas}</p>
         <a className="hero-email reveal" href={`mailto:${socialLinks.email}`}><Mail size={17} />{socialLinks.email}</a>
         <div className="hero-actions reveal">
           <a className="button button-secondary" href={socialLinks.github} target="_blank" rel="noreferrer"><GitHubIcon size={17} /> GitHub</a>

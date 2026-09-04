@@ -18,7 +18,7 @@ export const education = [
     title: 'Computer Science',
     organization: 'University of Crete',
     period: '2021 — Present',
-    description: 'Main Focus Areas: software engineering, backend development, object-oriented programming, databases, parallel and distributed systems.',
+    description: '',
     details: '',  
   },
 ];
@@ -27,11 +27,30 @@ export const career = [
   {
     type: 'Internship',
     title: 'Scidrones',
-    organization: 'Full stack web application development',
+    organization: 'Full Stack Web Development',
     period: 'JUL 2026 - Present',
-    description: 'Developing a web application for Scidrones\'s LaskAI (AI model for marine litter detection).',
+    description: 'Developed the web application https://laskai.scidrones.com/ for Scidrones\'s LaskAI (AI model for marine litter detection).',
     details: '',
-  }
+  },
+];
+
+export const skillGroups = [
+  {
+    name: 'Languages',
+    skills: ['Java', 'C', 'Python', 'C++', 'SQL', 'JavaScript', 'HTML'],
+  },
+  {
+    name: 'Frameworks',
+    skills: ['FastAPI', 'PostgreSQL', 'MySQL', 'SQLite', 'React.js'],
+  },
+  {
+    name: 'Tools',
+    skills: ['Git', 'Docker'],
+  },
+  {
+    name: 'Main Focus Areas',
+    skills: ['Software Engineering', 'Full Stack Web Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
+  },
 ];
 
 export const projects = [
