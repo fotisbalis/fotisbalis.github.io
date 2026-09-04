@@ -49,7 +49,7 @@ export const skillGroups = [
   },
   {
     name: 'Main Focus Areas',
-    skills: ['Software Engineering', 'Full Stack Web Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
+    skills: ['Software Engineering', 'Full Stack Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
   },
 ];
 
