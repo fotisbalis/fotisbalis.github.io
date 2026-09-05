@@ -61,7 +61,7 @@ export const projects = [
     releases: 'https://github.com/fotisbalis/Chess/releases',
     github: 'https://github.com/fotisbalis/Chess',
     featured: true,
-    topRightLabel: 'Personal Project',
+    topRightLabel: '',
     number: '01',
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
     releases: 'https://github.com/fotisbalis/Macro_Tracker_Web_App/releases',
     github: 'https://github.com/fotisbalis/Macro_Tracker_Web_App',
     featured: true,
-    topRightLabel: 'Personal Project',
+    topRightLabel: '',
     number: '02',
   },
   {
@@ -100,7 +100,7 @@ export const projects = [
     website: 'https://fotisbalis.github.io/Pipeline_Energy_Calculator/',
     websiteLabel: 'Website',
     featured: true,
-    topRightLabel: 'Personal Project',
+    topRightLabel: '',
     number: '05',
   }
 ];
