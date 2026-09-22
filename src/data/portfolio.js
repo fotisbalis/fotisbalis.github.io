@@ -37,11 +37,15 @@ export const career = [
 export const skillGroups = [
   {
     name: 'Languages',
-    skills: ['Java', 'C', 'Python', 'C++', 'SQL', 'JavaScript', 'HTML'],
+    skills: ['Java', 'C', 'JavaScript', 'Python', 'C++', 'SQL', 'HTML - CSS'],
   },
   {
     name: 'Frameworks',
-    skills: ['FastAPI', 'PostgreSQL', 'MySQL', 'SQLite', 'React.js'],
+    skills: ['FastAPI', 'Node.js', 'Rest APIs','React.js'],
+  },
+  {
+    name: 'Databases',
+    skills: ['PostgreSQL', 'MySQL', 'SQLite']
   },
   {
     name: 'Tools',
@@ -49,7 +53,7 @@ export const skillGroups = [
   },
   {
     name: 'Main Focus Areas',
-    skills: ['Software Engineering', 'Full Stack Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
+    skills: ['Software Engineering', 'Backend Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
   },
 ];
 

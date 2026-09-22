@@ -1,9 +1,8 @@
 import { Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 
 const navigation = [
-  ['About', '#about'],
   ['Experience', '#experience'],
   ['Skills', '#skills'],
   ['Projects', '#projects'],
@@ -13,6 +12,8 @@ export function Navbar({ theme, toggleTheme }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const navigatingToSection = useRef(false);
+  const navigationTimeout = useRef();
 
   useEffect(() => {
     let previousScrollY = window.scrollY;
@@ -22,6 +23,10 @@ export function Navbar({ theme, toggleTheme }) {
       const distance = currentScrollY - previousScrollY;
 
       setScrolled(currentScrollY > 12);
+      if (navigatingToSection.current) {
+        previousScrollY = currentScrollY;
+        return;
+      }
       if (currentScrollY <= 12 || distance < -6 || open) setHidden(false);
       else if (distance > 6) setHidden(true);
 
@@ -39,14 +44,36 @@ export function Navbar({ theme, toggleTheme }) {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
+  useEffect(() => () => window.clearTimeout(navigationTimeout.current), []);
+
+  const handleSectionNavigation = (event, href) => {
+    event.preventDefault();
+    const eyebrow = document.querySelector(`${href} .eyebrow`);
+    if (!eyebrow) return;
+
+    setOpen(false);
+    navigatingToSection.current = true;
+    setHidden(true);
+    window.history.pushState(null, '', href);
+    window.scrollTo({
+      top: Math.max(0, window.scrollY + eyebrow.getBoundingClientRect().top - 48),
+      behavior: 'smooth',
+    });
+
+    window.clearTimeout(navigationTimeout.current);
+    navigationTimeout.current = window.setTimeout(() => {
+      navigatingToSection.current = false;
+    }, 1400);
+  };
+
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}>
       <nav className="nav container" aria-label="Main navigation">
-        <a className="wordmark" href="#about" onClick={() => setOpen(false)}>Fotis Balis<span>.</span></a>
+        <a className="wordmark" href="#about" onClick={() => setOpen(false)}>Fotis Balis</a>
         <div className={`nav-menu ${open ? 'is-open' : ''}`} id="primary-navigation">
           <div className="nav-links">
             {navigation.map(([label, href]) => (
-              <a href={href} key={href} onClick={() => setOpen(false)}>{label}</a>
+              <a href={href} key={href} onClick={(event) => handleSectionNavigation(event, href)}>{label}</a>
             ))}
           </div>
           <div className="nav-actions">

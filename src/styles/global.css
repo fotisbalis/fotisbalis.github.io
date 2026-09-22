@@ -76,7 +76,7 @@ h1 span { display: block; color: var(--muted); font-size: .39em; letter-spacing:
 .hero-side ul { list-style: none; padding: 0; margin: 0; }
 .hero-side li { padding: 7px 0; font-size: .8rem; color: var(--muted); border-bottom: 1px solid var(--line); }
 
-.section { padding: 120px 0; border-top: 1px solid var(--line); }
+.section { padding: 120px 0; border-top: 1px solid var(--line); scroll-margin-top: -176px; }
 .section-heading { max-width: 720px; margin-bottom: 58px; }
 h2 { margin-bottom: 17px; font-size: clamp(2rem, 4.5vw, 3.65rem); line-height: 1.06; letter-spacing: -.065em; }
 .section-heading > p:not(.eyebrow) { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 610px; }
@@ -142,7 +142,7 @@ h2 { margin-bottom: 17px; font-size: clamp(2rem, 4.5vw, 3.65rem); line-height: 1
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 58px; padding: 56px 0 72px; }
   h1 { font-size: clamp(3rem, 14.6vw, 4.8rem); }
   .hero-side { max-width: 300px; }
-  .section { padding: 82px 0; }
+  .section { padding: 82px 0; scroll-margin-top: -136px; }
   .section-heading { margin-bottom: 43px; }
   .timeline-item { grid-template-columns: 1fr; gap: 15px; padding-left: 27px; padding-bottom: 47px; }
   .timeline-meta { display: flex; gap: 12px; align-items: baseline; }
