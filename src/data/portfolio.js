@@ -8,8 +8,8 @@ export const socialLinks = {
 export const hero = {
   name: 'Fotis Balis',
   title: 'Computer Science Student',
-  intro:
-    'Final-year CS student at the University of Crete',
+  role: 'Software Engineer', 
+  education: 'Final-year CS student'
 };
 
 export const education = [
@@ -27,8 +27,8 @@ export const career = [
   {
     type: 'Internship',
     title: 'Scidrones',
-    organization: 'Full Stack Web Development',
-    period: 'JUL 2026 - Present',
+    organization: 'Full Stack Developer',
+    period: 'JUL - SEP 2026',
     description: 'Developed the web application https://laskai.scidrones.com/ for Scidrones\'s LaskAI (AI model for marine litter detection).',
     details: '',
   },
@@ -53,7 +53,7 @@ export const skillGroups = [
   },
   {
     name: 'Main Focus Areas',
-    skills: ['Software Engineering', 'Backend Development', 'Object-Oriented Programming', 'Database Systems', 'Parallel/Concurrent Programming'],
+    skills: ['Software Engineering', 'Full-Stack Development'],
   },
 ];
 

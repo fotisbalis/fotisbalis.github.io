@@ -10,8 +10,8 @@
   --faint: #929ba0;
   --line: #dce1e3;
   --strong-line: #c6ced1;
-  --accent: #27665a;
-  --accent-contrast: #f5fbf9;
+  --accent: #367766;
+  --accent-contrast: #102b27;
   --font-sans: 'Manrope', Arial, sans-serif;
   --font-mono: 'DM Mono', Consolas, monospace;
 }
@@ -62,8 +62,10 @@ h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 850px; margin-bottom: 31px; font-size: clamp(3.2rem, 8.1vw, 7.4rem); line-height: .98; letter-spacing: -.074em; font-weight: 800; }
 h1 span { display: block; color: var(--muted); font-size: .39em; letter-spacing: -.055em; margin-top: .27em; }
 .hero-intro { max-width: 735px; font-size: clamp(1.1rem, 1.8vw, 1.38rem); line-height: 1.65; letter-spacing: -.024em; }
-.hero-email { width: fit-content; display: inline-flex; align-items: center; gap: 8px; color: var(--muted); margin-top: 18px; font: .99rem var(--font-sans); transition: color .18s ease; }
-.hero-email:hover, .hero-email:focus-visible { color: var(--accent); }
+.intro-separator { display: inline-block; margin-inline: .28em; font-size: 1.35em; line-height: 0; vertical-align: -.06em; }
+.hero-email { width: fit-content; display: inline-flex; align-items: center; gap: 8px; color: var(--muted); margin-top: 18px; font: .99rem var(--font-sans); }
+.hero-email a { display: inline-flex; align-items: center; gap: 8px; transition: color .18s ease; }
+.hero-email a:hover, .hero-email a:focus-visible { color: var(--accent); }
 .hero-supporting { color: var(--muted); font-size: .98rem; line-height: 1.7; max-width: 640px; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 34px; }
 .button { min-height: 46px; padding: 0 17px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); font-size: .84rem; font-weight: 700; transition: transform .18s ease, border-color .18s ease, background-color .18s ease; }
